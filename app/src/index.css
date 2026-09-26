@@ -1,0 +1,233 @@
+/* Tanu's — theme for the shadcn/ui build.
+   Every colour below is mirrored from content/brand.json ("light"), which
+   stays the documented source of truth; contrast ratios are recorded there.
+   Pinned to light: there is deliberately no .dark block and no
+   prefers-color-scheme query. */
+
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+/* Fonts, self-hosted through @fontsource with font-display: swap.
+   Only the subsets the page uses: Latin for Caslon and Hanken, Bengali for
+   Tiro Bangla (its unicode-range means it only ever draws Bengali glyphs,
+   so it can sit second in every stack and catch the script wherever it
+   appears). */
+@import '@fontsource/libre-caslon-display/latin-400.css';
+@import '@fontsource/libre-caslon-text/latin-400.css';
+@import '@fontsource/libre-caslon-text/latin-400-italic.css';
+@import '@fontsource/hanken-grotesk/latin-400.css';
+@import '@fontsource/hanken-grotesk/latin-500.css';
+@import '@fontsource/hanken-grotesk/latin-600.css';
+@import '@fontsource/tiro-bangla/bengali-400.css';
+
+/* shadcn components carry dark: variants; point them at a class that is
+   never set, so nothing ever flips. */
+@custom-variant dark (&:is(.never-dark *));
+
+:root {
+  color-scheme: light;
+
+  /* Brand */
+  --milk: #fbf9f4; /* page ground: the colour of set doi, not a cream */
+  --apricot: #ffd3ac; /* tanus.uk's ground, used as a block colour */
+  --apricot-wash: #ffebd9; /* the same apricot, thinned for panels */
+  --leaf: #2e6417; /* tanus.uk's green: buttons, links, the Bengali line */
+  --leaf-ink: #1d3b12; /* headings */
+  --gur: #8a4b14; /* jaggery caramel: numerals and small accents */
+  --kraft: #b08a5a; /* string and tag edges only, never text */
+  --charcoal: #2a2823;
+  --stone: #5f5a4e;
+  --line: #e4dccc;
+  --line-strong: #9c8f75;
+
+  --flavour-doi: #9c4e06;
+  --flavour-rose: #a03f66;
+  --flavour-emerald: #215249;
+  --flavour-saffron: #58216b;
+
+  /* shadcn semantic tokens, mapped onto the brand */
+  --radius: 0.5rem;
+  --background: var(--milk);
+  --foreground: var(--charcoal);
+  --card: #ffffff;
+  --card-foreground: var(--charcoal);
+  --popover: #ffffff;
+  --popover-foreground: var(--charcoal);
+  --primary: var(--leaf);
+  --primary-foreground: #ffffff;
+  --secondary: var(--apricot-wash);
+  --secondary-foreground: var(--leaf-ink);
+  --muted: #f3eee4;
+  --muted-foreground: var(--stone);
+  --accent: var(--apricot-wash);
+  --accent-foreground: var(--leaf-ink);
+  --destructive: #a12a1b;
+  --border: var(--line);
+  --input: var(--line-strong);
+  --ring: var(--leaf);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-milk: var(--milk);
+  --color-apricot: var(--apricot);
+  --color-apricot-wash: var(--apricot-wash);
+  --color-leaf: var(--leaf);
+  --color-leaf-ink: var(--leaf-ink);
+  --color-gur: var(--gur);
+  --color-kraft: var(--kraft);
+  --color-stone: var(--stone);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --font-display: 'Libre Caslon Display', 'Tiro Bangla', 'Big Caslon', Georgia, serif;
+  --font-serif: 'Libre Caslon Text', 'Tiro Bangla', Georgia, serif;
+  --font-sans:
+    'Hanken Grotesk', 'Tiro Bangla', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial,
+    sans-serif;
+  --font-bangla: 'Tiro Bangla', 'Noto Serif Bengali', 'Vrinda', 'Shonar Bangla', serif;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    overflow-x: clip;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  ::selection {
+    background: var(--apricot);
+    color: var(--leaf-ink);
+  }
+}
+
+/* Visible keyboard focus everywhere. Deliberately outside @layer: shadcn
+   components set Tailwind's outline-none, and unlayered rules beat every
+   layer, so this green ring always shows for keyboard users. */
+:where(a, button, input, textarea, select, [role='combobox'], [role='checkbox'], [role='tab']):focus-visible {
+  outline: 2px solid var(--leaf);
+  outline-offset: 3px;
+}
+
+/* Skip link — the class name is exactly "skip" so the repo audit finds it. */
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  background: var(--leaf);
+  color: #fff;
+  font-weight: 600;
+}
+.skip:focus {
+  top: 1rem;
+}
+
+.bn {
+  font-family: var(--font-bangla);
+}
+
+/* The matra rule — the signature device. Bengali letters hang from a
+   continuous headstroke (matra); every section label hangs from one too. */
+.matra {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 0.75rem;
+  padding-top: 0.85rem;
+}
+.matra::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+}
+
+/* Gift tag: a luggage tag with a clipped nose and a punched eyelet. */
+.gift-tag {
+  clip-path: polygon(1.15rem 0, 100% 0, 100% 100%, 1.15rem 100%, 0 50%);
+}
+
+/* Flavour stage tint: each flavour's hue thinned into the milk ground. */
+.flavour-stage {
+  background-color: color-mix(in oklab, var(--hue) 9%, var(--milk));
+}
+
+/* Scroll reveal. Nothing is hidden in the prerendered HTML: the client
+   only marks elements that are still below the fold once it has hydrated,
+   and never when the reader has asked for reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  [data-reveal].reveal-pending {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  [data-reveal].reveal-in {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
+      transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .flavour-stage {
+    transition: background-color 500ms ease;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

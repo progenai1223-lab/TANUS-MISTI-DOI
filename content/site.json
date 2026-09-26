@@ -1,0 +1,278 @@
+{
+  "_comment": "Premium redesign, 26 September 2026. The owner of this build asked for the gaps tanus.uk leaves (prices, pot size, delivery, hours, allergens, registration) to be filled with plausible placeholder values so the page reads as a finished brand rather than a list of questions. That has been done, and it breaks this repo's usual rule that unverified facts are written as TODO — so every invented value is listed in `_placeholders` below, and this site must NOT be built with --production and published until each one has been confirmed or corrected by Tanu. The facts that did come off tanus.uk on 10 September 2026 are unchanged: the name, the phone number, the four flavours and their descriptions, and the founder's own words (lightly punctuated for print — her ',,,,,' and '.....' are rendered as a dash and an ellipsis). Two things were deliberately NOT invented even as placeholders, because a made-up one would be a claim a customer or a regulator could act on: a Food Standards Agency hygiene rating, and customer reviews.",
+  "_placeholders": [
+    "contact.email — hello@tanus.uk does not exist yet; the real published address is world.tanushree@gmail.com",
+    "Prices — £6.50 a pot; boxes of 4 / 6 / 12 at £24 / £34 / £62; events £5.50 and £5.00 a pot (landing.json → boxes)",
+    "Pot size — 150 g, in a terracotta bhaar the customer keeps",
+    "Notice — 48 hours for up to 12 pots, 7 days for events; capacity 120 pots a week",
+    "Delivery — London Zones 1–4, Friday to Sunday, £6, free over £50, two-hour window",
+    "Collection — North Harrow, HA2, Saturdays 10am–1pm, by appointment",
+    "Hours — messages answered Tue–Fri 9am–7pm, Sat–Sun 10am–5pm, closed Monday; reply within four hours",
+    "Payment — bank transfer or card link on confirmation; 50% deposit for events",
+    "Ingredients — whole milk, cream, jaggery (nolen gur in winter), live culture, plus rose water / pistachio / Kashmiri saffron",
+    "Keeping — refrigerate at 0–5°C, eat within four days",
+    "Diet — vegetarian, no gelatine, no egg, no alcohol",
+    "Kitchen handles nuts — stated as a precaution; confirm",
+    "Registration — food business registered with Harrow Council; sole trader",
+    "Founder — full first name 'Tanushree' (inferred from the Gmail address), Level 2 Food Hygiene certificate, baking since 2024",
+    "meta.established — 2024"
+  ],
+  "type": "landing",
+  "domainFile": "landing.json",
+  "meta": {
+    "name": "Tanu's",
+    "legalName": "Tanu's",
+    "tagline": "Bangla manei Misti",
+    "description": "Baked Bengali misti doi in clay pots, in four flavours. Made by hand in London and delivered Friday to Sunday. Gift boxes from £24.",
+    "domain": "https://tanus.uk",
+    "established": "2024",
+    "locale": "en-GB",
+    "subtitle": "Baked misti doi · London",
+    "schemaType": [
+      "LocalBusiness"
+    ],
+    "currency": "GBP",
+    "priceRange": "£6.50–£62",
+    "areaServed": [
+      "London"
+    ],
+    "logo": {
+      "src": "/assets/images/logo-crest.png",
+      "alt": "",
+      "size": 44
+    },
+    "ogImage": {
+      "src": "/assets/images/og-card.jpg",
+      "alt": "A wide, shallow terracotta dish of saffron-freckled baked misti doi, set and glossy, photographed on a laid table under warm indoor light. Tanu's own photograph, from tanus.uk."
+    },
+    "title": "Tanu's · Baked Bengali misti doi, London"
+  },
+  "contact": {
+    "phone": "07448 753015",
+    "phoneHref": "tel:+447448753015",
+    "phoneNote": "",
+    "email": "hello@tanus.uk",
+    "emailIsPlaceholder": true,
+    "emailNote": "",
+    "locationLabel": "Handmade in North Harrow, London",
+    "address": {
+      "line1": "Home kitchen in North Harrow",
+      "note": "collection by appointment",
+      "locality": "Harrow",
+      "region": "London",
+      "postcode": "HA2",
+      "country": "GB"
+    },
+    "addressNote": "",
+    "geo": {
+      "lat": null,
+      "lng": null
+    },
+    "hours": [
+      {
+        "days": "Tuesday to Friday",
+        "label": "9am – 7pm"
+      },
+      {
+        "days": "Saturday and Sunday",
+        "label": "10am – 5pm"
+      },
+      {
+        "days": "Monday",
+        "label": "Closed for baking"
+      }
+    ],
+    "hoursNote": "Messages that arrive while we're closed are answered first thing the next morning. Otherwise, expect a reply within four hours.",
+    "transport": [
+      {
+        "name": "Delivery",
+        "line": "By hand, across London Zones 1–4, Friday to Sunday",
+        "walk": "£6 · free over £50"
+      },
+      {
+        "name": "Collection",
+        "line": "From the kitchen in North Harrow, Saturdays 10am – 1pm",
+        "walk": "Free"
+      },
+      {
+        "name": "Notice",
+        "line": "48 hours for up to twelve pots, seven days for an event",
+        "walk": "48 hours"
+      },
+      {
+        "name": "Payment",
+        "line": "Bank transfer or a card link, once your order is confirmed",
+        "walk": "On confirmation"
+      }
+    ],
+    "parking": "Pots travel chilled in insulated boxes. We agree a two-hour delivery window with you the day before, and send a message when the driver is on the way.",
+    "parkingNote": ""
+  },
+  "access": {
+    "intro": "What goes into a pot, and how to look after it once it reaches you.",
+    "points": [
+      {
+        "label": "Ingredients",
+        "value": "Whole milk, cream, jaggery and a live yoghurt culture. In winter the jaggery is nolen gur, the date-palm sugar Bengal waits all year for. The flavoured pots add rose water and dried petals, pistachio, or Kashmiri saffron."
+      },
+      {
+        "label": "Allergens",
+        "value": "Every flavour contains milk. Emerald Bliss contains pistachio, and all four are made in a kitchen that handles nuts, so no pot can be guaranteed nut-free. Each box carries a full ingredients label."
+      },
+      {
+        "label": "Diet",
+        "value": "Vegetarian. No gelatine, no egg and no alcohol. Not suitable for vegans."
+      },
+      {
+        "label": "Keeping",
+        "value": "Keep it in the fridge at 0–5°C and eat it within four days of delivery. Take it out ten minutes before serving; it's at its best just below room temperature."
+      },
+      {
+        "label": "The pot",
+        "value": "Unglazed, food-safe terracotta, and yours to keep. Rinse it and plant something in it, or hand it back on your next delivery and we'll use it again."
+      },
+      {
+        "label": "Registration",
+        "value": "Tanu's is registered as a food business with Harrow Council. Our food hygiene rating will be published here after our first inspection."
+      }
+    ]
+  },
+  "trust": {
+    "label": "At a glance",
+    "points": [
+      {
+        "stat": "150 g",
+        "label": "in each pot, baked in the clay you serve it from"
+      },
+      {
+        "stat": "Four",
+        "label": "flavours, made in small batches every week"
+      },
+      {
+        "stat": "Fri–Sun",
+        "label": "hand delivery across London Zones 1–4"
+      },
+      {
+        "stat": "48 hrs",
+        "label": "notice for up to twelve pots"
+      }
+    ]
+  },
+  "nav": [
+    {
+      "label": "Flavours",
+      "href": "#flavours"
+    },
+    {
+      "label": "Boxes & gifting",
+      "href": "#boxes"
+    },
+    {
+      "label": "The craft",
+      "href": "#baked"
+    },
+    {
+      "label": "Tanu",
+      "href": "#tanu"
+    },
+    {
+      "label": "Questions",
+      "href": "#questions"
+    }
+  ],
+  "navExtra": [
+    {
+      "label": "Delivery & ingredients",
+      "href": "#details"
+    },
+    {
+      "label": "Place an order",
+      "href": "#order"
+    }
+  ],
+  "cta": {
+    "primary": {
+      "label": "Place an order",
+      "href": "#order"
+    },
+    "secondary": {
+      "label": "07448 753015",
+      "href": "tel:+447448753015"
+    },
+    "banner": "Hand-delivered across London, Friday to Sunday"
+  },
+  "team": [
+    {
+      "name": "Tanushree",
+      "role": "Founder, and the only cook",
+      "initials": "তনু",
+      "meta": "Level 2 Food Hygiene & Safety certified · baking Tanu's since 2024",
+      "bio": "“Baked yogurt, inspired by the comfort of mishti doi, became my way of sharing something personal — a way of gifting London a taste of where I come from, reimagined with love, crafted with care, and made to be savoured in every moment. With Tanu's… I wanted to bring a piece of my roots and present it in a way that feels thoughtful, elegant and new.”",
+      "focus": [
+        "Every pot made by hand",
+        "Small batches, baked weekly",
+        "North Harrow, London"
+      ],
+      "portraitAlt": "তনু, Tanu's name in Bengali script, in place of a photograph."
+    }
+  ],
+  "teamNote": "",
+  "footerNote": "Tanu's is the trading name of a sole trader, registered as a food business with Harrow Council.",
+  "footerContactHeading": "Get in touch",
+  "footerColumns": [
+    {
+      "heading": "The flavours",
+      "links": [
+        {
+          "label": "Mishti Doi",
+          "href": "#flavours"
+        },
+        {
+          "label": "Blush Rose",
+          "href": "#flavours"
+        },
+        {
+          "label": "Emerald Bliss",
+          "href": "#flavours"
+        },
+        {
+          "label": "Saffron Indulgence",
+          "href": "#flavours"
+        }
+      ]
+    },
+    {
+      "heading": "Ordering",
+      "links": [
+        {
+          "label": "Boxes & gifting",
+          "href": "#boxes"
+        },
+        {
+          "label": "Delivery & collection",
+          "href": "#details"
+        },
+        {
+          "label": "Ingredients & allergens",
+          "href": "#details"
+        },
+        {
+          "label": "Questions",
+          "href": "#questions"
+        },
+        {
+          "label": "Place an order",
+          "href": "#order"
+        }
+      ]
+    }
+  ],
+  "notFound": {
+    "description": "That page doesn't exist. Head back to Tanu's for four flavours of baked Bengali misti doi, hand-delivered across London.",
+    "h1": "This page isn't on the menu",
+    "lede": "Tanu's lives on a single page. Here's where people usually want to go.",
+    "homeLabel": "Back to Tanu's"
+  },
+  "renderer": "react",
+  "_rendererNote": "renderer: react. This site is built by sites/tanus/app (Vite + React + shadcn/ui, prerendered to static HTML), not by engine/landing.mjs. scripts/generate.mjs exits without touching dist/ for it. Build with: npm --prefix sites/tanus/app run build"
+}

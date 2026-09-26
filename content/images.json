@@ -1,0 +1,33 @@
+{
+  "_comment": "Almost every image on the Tanu's page is the client's own photography, downloaded from tanus.uk and re-encoded for the web — those are recorded in sites/tanus/assets/images/images.json, not here. This spec exists for the three slots the client had no picture for: the band beside the enquiry form, and the bands in the reassurance and visit sections. The later two were generated with band-empty-bhaar.jpg passed as a reference image so the three read as one set. It is deliberately a still life of the empty vessel rather than of food or of a kitchen, because a generated bowl of misti doi presented next to 'order from Tanu's' would read as a photograph of what you are buying, and it would not be one. The style sentence is written to match the client's existing shots — warm terracotta on pale stone, soft daylight — so the generated frame sits in the same set as the real ones.",
+
+  "site": "tanus",
+
+  "style": "Warm, quiet food still-life photography with no food in it: unglazed red-brown terracotta vessels on a pale grey-white stone surface, soft diffused daylight from one side, gentle shadows, a shallow depth of field, muted natural colour with warm terracotta against cool stone, nothing styled or glossy, the calm of a working kitchen bench before anything has been made",
+
+  "avoid": "people, hands, faces, food, yoghurt, dessert, anything edible, text, letters, Bengali or Latin lettering, numerals, labels, logos, watermarks, brand names, shopfronts, restaurant interiors, stock-photo styling, lens flare, HDR, heavy vignetting, oversaturated colour, glossy modern crockery, plastic containers",
+
+  "defaults": { "aspect": "16:9", "size": "2K", "model": "flash" },
+
+  "images": [
+    {
+      "name": "band-empty-bhaar",
+      "aspect": "21:9",
+      "size": "2K",
+      "prompt": "A wide horizontal still life on a pale grey-white stone worktop. Six or seven small unglazed red-brown terracotta pots of the traditional Bengali bhaar shape — squat, round-bellied, wide-mouthed, rough-thrown, unfinished on the outside — stand empty and upside down in a loose row, with two more stacked rim to rim at the right. Their surfaces are matte and slightly dusty with clay. Beside them lies a length of plain undyed cotton string and a folded square of unprinted brown paper. Soft diffused daylight rakes in from the left, casting long soft shadows across the stone. Nothing in the pots, no food anywhere in the frame, no people, no lettering of any kind.",
+      "alt": "Empty unglazed terracotta pots of the traditional bhaar shape standing upside down in a row on a pale stone worktop, with plain string and folded paper beside them. An illustration of the vessel misti doi is set in, not a photograph of Tanu's kitchen."
+    },
+    {
+      "name": "band-clay-wall",
+      "aspect": "21:9",
+      "prompt": "A close, low-angle still life of three empty unglazed red-brown terracotta bhaar pots on a pale grey-white stone worktop, the nearest one filling the left third of the frame and turned slightly so its rim and the rough outside wall are both visible. The clay is matte, porous and uneven, with fine pits, thumb-marks from the wheel and a faint pale dusting of dried clay; the inside of the rim is bare and dry. The other two stand behind it, softly out of focus. Soft diffused daylight from the left picks out the grain of the clay. The pots are completely empty, nothing inside them or anywhere in the frame, no people, no lettering of any kind.",
+      "alt": "A close view of empty unglazed terracotta pots on a pale stone worktop, showing the rough, porous clay of their walls. An illustration of the kind of vessel misti doi is traditionally set in, not a photograph of Tanu's kitchen."
+    },
+    {
+      "name": "band-folded-linen",
+      "aspect": "21:9",
+      "prompt": "A wide, sparse still life on a pale grey-white stone worktop. At the right of the frame a single empty unglazed red-brown terracotta bhaar pot lies on its side, mouth facing the camera, showing the bare dry clay inside. To its left a square of plain undyed cotton cloth is folded neatly into a flat rectangle, with a worn brass spoon resting across it. The left half of the frame is mostly empty stone. Soft diffused daylight from the left, long gentle shadows, quiet and orderly. Nothing edible, no people, no paper, no lettering of any kind.",
+      "alt": "An empty terracotta pot lying on its side on a pale stone worktop beside a folded plain cotton cloth and a brass spoon. An illustration, not a photograph of Tanu's kitchen."
+    }
+  ]
+}

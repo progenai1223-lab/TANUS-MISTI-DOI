@@ -1,0 +1,4 @@
+node_modules/
+app/.ssr/
+.env
+.DS_Store

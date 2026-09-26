@@ -1,0 +1,2 @@
+# Server bundle written by `vite build --ssr`; prerender.mjs deletes it after use.
+.ssr/

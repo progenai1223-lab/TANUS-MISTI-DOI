@@ -1,0 +1,49 @@
+{
+  "_comment": "Design tokens for Tanu's, React redesign, 26 September 2026. Rendered by sites/tanus/app (shadcn/ui on Tailwind v4); app/src/index.css mirrors these values into CSS variables and shadcn's semantic tokens. Direction: contemporary British food-editorial on a light ground, with Bengali as display type. The ground is milk (#FBF9F4), the colour of set doi, not a parchment cream; the client's own apricot (#FFD3AC) is used as a block colour (photo field, the cook's name plate, gift tags, the closing band) and thinned to apricot-wash for panels; the client's leaf green (#2E6417) carries buttons, links and the Bengali tagline, with a deeper leaf-ink for headings. Gur, the colour of jaggery caramel, is the only other accent: Bengali numerals, drop cap, small labels. Terracotta is left to the photographs. Pinned to light: no dark palette is applied anywhere.",
+  "_fontsNote": "Three families, one job each. Libre Caslon Display (headings) and Libre Caslon Text (italic standfirsts, pull quotes, Tanu's words): Caslon is the London type, cut in 1720s Clerkenwell and the face of English printing for a century, so it gives the page British editorial authority without the Playfair wedding-menu look. Hanken Grotesk (400/500/600) does the reading and the UI: a sober grotesk with open apertures that disappears at 17px. Tiro Bangla, by Tiro Typeworks, sets every Bengali word: a literary serif with proper conjunct support, loaded as its Bengali subset only and placed second in every stack, so Bengali anywhere on the page falls through to it. All self-hosted via @fontsource with font-display: swap.",
+  "fonts": {
+    "display": "'Libre Caslon Display', 'Tiro Bangla', 'Big Caslon', Georgia, serif",
+    "serif": "'Libre Caslon Text', 'Tiro Bangla', Georgia, serif",
+    "body": "'Hanken Grotesk', 'Tiro Bangla', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif",
+    "bangla": "'Tiro Bangla', 'Noto Serif Bengali', 'Vrinda', 'Shonar Bangla', serif",
+    "source": "@fontsource packages, imported in sites/tanus/app/src/index.css"
+  },
+  "colorScheme": "light",
+  "_paletteNote": "Measured WCAG 2 ratios. On milk #FBF9F4: body #2A2823 14.0, leaf-ink 11.8, muted 6.5, leaf 6.8, gur 6.4; flavour hues doi 5.7, rose 5.9, emerald 8.4, saffron 10.8. On white cards: body 14.7, leaf 7.1, muted 6.9. On apricot-wash #FFEBD9: body 12.7, leaf-ink 10.8, muted 5.9, leaf 6.1, gur 5.9. On apricot #FFD3AC: leaf-ink 9.0, body 10.6, leaf 5.1 (display sizes only), muted 5.0. White on leaf (buttons): 7.1. Input borders line-strong #9C8F75 on white: 3.2 (non-text 3:1). kraft #B08A5A is decorative only (string, eyelet), never text.",
+  "light": {
+    "bg": "#FBF9F4",
+    "surface": "#FFFFFF",
+    "surface-2": "#F3EEE4",
+    "apricot": "#FFD3AC",
+    "apricot-wash": "#FFEBD9",
+    "ink": "#1D3B12",
+    "body": "#2A2823",
+    "muted": "#5F5A4E",
+    "line": "#E4DCCC",
+    "line-strong": "#9C8F75",
+    "accent": "#2E6417",
+    "on-accent": "#FFFFFF",
+    "gur": "#8A4B14",
+    "kraft": "#B08A5A",
+    "destructive": "#A12A1B",
+    "flavour-doi": "#9C4E06",
+    "flavour-rose": "#A03F66",
+    "flavour-emerald": "#215249",
+    "flavour-saffron": "#58216B"
+  },
+  "radius": {
+    "sm": "4px",
+    "md": "6px",
+    "lg": "8px",
+    "xl": "12px",
+    "pill": "999px"
+  },
+  "maxWidth": "1320px",
+  "proseWidth": "62ch",
+  "_motionNote": "One restrained reveal: 14px of travel over 700ms, applied after hydration only to elements still below the fold, and never under prefers-reduced-motion. The flavour stage cross-fades its tint over 500ms.",
+  "motion": {
+    "distance": "14px",
+    "duration": "700ms",
+    "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+  }
+}

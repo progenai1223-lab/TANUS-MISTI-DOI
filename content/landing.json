@@ -1,0 +1,476 @@
+{
+  "_comment": "Premium React redesign, 26 September 2026 (renderer: react, see sites/tanus/app). The page reads as a finished artisan brand: flavours first, then boxes and prices, then the craft, the cook, questions, the order form and the practical details. Every price, pot size, delivery term and dietary statement here is a PLACEHOLDER invented at the owner's request (see _placeholders in site.json) and must be confirmed by Tanu before launch. The four flavour descriptions are Tanu's own words from tanus.uk, lightly punctuated. Section eyebrows are bilingual: {bn, en}, a Bengali word set in Tiro Bangla and its English label. The ordering steps moved from the craft section to the order section, where the sequence is actually used; they are the one place Bengali numerals appear. testimonials is still unused: there are no real reviews, and invented ones are never acceptable.",
+  "hero": {
+    "kicker": "Baked misti doi · North Harrow, London",
+    "thesis": {
+      "bn": "বাংলা মানেই মিষ্টি",
+      "translit": "Bangla manei misti",
+      "gloss": "“Bengal means sweetness.”"
+    },
+    "h1": "Misti doi, baked slowly in clay",
+    "intro": "Bengal's sweet set yoghurt, the one every good Bengali meal ends on. Tanu bakes hers in small terracotta pots in her London kitchen, in four flavours, and brings them to your door.",
+    "notes": [
+      "Four flavours: the original, rose, pistachio and saffron",
+      "Hand-delivered across London, Friday to Sunday",
+      "Gift boxes of four, six or twelve, from £24"
+    ],
+    "secondary": {
+      "label": "See the flavours",
+      "href": "#flavours"
+    },
+    "tag": {
+      "value": "From £6.50",
+      "label": "a pot · 150 g in its own clay bhaar"
+    },
+    "image": {
+      "src": "/assets/images/hero-baked-doi.jpg",
+      "alt": "A wide, shallow terracotta dish of baked misti doi, set firm and glossy and freckled with red saffron threads, standing on a white plate at the end of a laid table under warm indoor light. Tanu's own photograph, published on tanus.uk.",
+      "width": 1100,
+      "height": 1467
+    },
+    "figureCaption": "Saffron Indulgence, baked in a shallow clay dish"
+  },
+  "sections": [
+    {
+      "type": "cards",
+      "id": "flavours",
+      "eyebrow": {
+        "bn": "স্বাদ",
+        "en": "The flavours"
+      },
+      "heading": "Four flavours, and no more",
+      "lede": "One recipe, perfected, then taken in three directions. Each is baked in its own clay pot, and each tastes best the day after it arrives.",
+      "fitLabels": {
+        "yes": "Best for",
+        "no": "Pairs with"
+      },
+      "items": [
+        {
+          "slug": "mishti-doi",
+          "name": "Mishti Doi",
+          "kind": "The original",
+          "price": "£6.50",
+          "hue": "flavour-doi",
+          "image": {
+            "src": "/assets/images/flavour-mishti-doi.jpg",
+            "alt": "A shallow terracotta bowl of plain baked misti doi, pale cream and swirled smooth right to the rim, photographed from above on a grey stone surface with chopped pistachio scattered beside it."
+          },
+          "body": "Traditional Bengali sweetened yoghurt: rich and creamy, with a caramelised, earthy flavour. The pot every other flavour is measured against.",
+          "good": "Your first order, and anyone who grew up on it.",
+          "notFor": "A cup of Darjeeling after a long Sunday lunch."
+        },
+        {
+          "slug": "blush-rose",
+          "name": "Blush Rose",
+          "kind": "Rose",
+          "price": "£6.50",
+          "hue": "flavour-rose",
+          "image": {
+            "src": "/assets/images/flavour-blush-rose.jpg",
+            "alt": "A shallow terracotta bowl of pale pink rose misti doi on grey stone, scattered across one side with dried rose petals and slivered pistachio, a worn brass spoon and two pink roses lying alongside."
+          },
+          "body": "Soft rose essence woven into a silky dessert, with a light floral sweetness inspired by timeless floral desserts.",
+          "good": "Gifts. It's the prettiest pot when the paper comes off.",
+          "notFor": "Fresh raspberries, or a glass of cold rose sharbat."
+        },
+        {
+          "slug": "emerald-bliss",
+          "name": "Emerald Bliss",
+          "kind": "Pistachio",
+          "price": "£6.50",
+          "hue": "flavour-emerald",
+          "allergen": {
+            "label": "Contains nuts",
+            "detail": "Emerald Bliss contains pistachio. All four flavours are made in a kitchen that handles nuts."
+          },
+          "image": {
+            "src": "/assets/images/flavour-emerald-bliss.jpg",
+            "alt": "A shallow terracotta bowl of pistachio misti doi on grey stone, pale gold with a bright green pistachio drizzle looping across the middle and crushed pistachios banked up either side of it."
+          },
+          "body": "Pistachio-rich, smooth and melt-in-the-mouth, with a creamy, nutty finish.",
+          "good": "Anyone who wants pistachio all the way through, not just on top.",
+          "notFor": "Strong black coffee, or cardamom tea."
+        },
+        {
+          "slug": "saffron-indulgence",
+          "name": "Saffron Indulgence",
+          "kind": "Saffron",
+          "price": "£7.50",
+          "hue": "flavour-saffron",
+          "image": {
+            "src": "/assets/images/flavour-saffron-indulgence.jpg",
+            "alt": "A close view of a terracotta bowl of saffron misti doi resting on undyed linen, deep cream in colour and freckled all over with fine red saffron threads, with a brass spoon at the edge of the frame."
+          },
+          "body": "Saffron-kissed and beautifully aromatic, with a refined finish. Made with Kashmiri saffron, steeped overnight in warm milk.",
+          "good": "Occasions: Eid, Durga Puja, a wedding table, a thank-you.",
+          "notFor": "Nothing at all. Let the saffron speak."
+        }
+      ],
+      "wordsLabel": "In Tanu's words",
+      "priceLabel": "a pot"
+    },
+    {
+      "type": "packages",
+      "id": "boxes",
+      "eyebrow": {
+        "bn": "উপহার",
+        "en": "Boxes & gifting"
+      },
+      "heading": "Sealed with paper and string",
+      "lede": "Every pot is capped with brown paper, tied with cotton string and packed in a kraft box, with a handwritten card if you'd like one.",
+      "items": [
+        {
+          "name": "The Tanu Box",
+          "meta": "Any mix of flavours · delivered Friday to Sunday",
+          "image": {
+            "src": "/assets/images/box-tasting-four.jpg",
+            "alt": "An open kraft box holding four small terracotta pots, each sealed with brown paper and string, on a pale stone worktop. An illustration of the gift box, not a photograph of Tanu's product."
+          },
+          "body": "Choose your flavours, or leave it to Tanu. A box of four with one of each is the easiest way to find your favourite.",
+          "rates": [
+            {
+              "label": "Box of 4",
+              "value": "£24"
+            },
+            {
+              "label": "Box of 6",
+              "value": "£34"
+            },
+            {
+              "label": "Box of 12",
+              "value": "£62"
+            }
+          ],
+          "includes": [
+            "Mix and match any of the four flavours",
+            "A handwritten gift card, free",
+            "A full ingredients label in every box"
+          ],
+          "link": {
+            "label": "Order a box",
+            "href": "#order"
+          }
+        },
+        {
+          "name": "Celebrations & events",
+          "meta": "Weddings, Eid, Puja, office parties · 24 pots or more",
+          "image": {
+            "src": "/assets/images/box-celebration.jpg",
+            "alt": "Rows of small terracotta pots sealed with brown paper and string on a linen-covered table, with marigold petals scattered between them. An illustration of an event order, not a photograph of Tanu's product."
+          },
+          "body": "Rows of clay pots on a table say celebration before anyone lifts a spoon. Tell us the date and the headcount, and we'll plan the flavours with you.",
+          "rates": [
+            {
+              "label": "24–47 pots",
+              "value": "£5.50 each"
+            },
+            {
+              "label": "48 pots or more",
+              "value": "£5.00 each"
+            },
+            {
+              "label": "Delivery & set-up",
+              "value": "Quoted"
+            }
+          ],
+          "includes": [
+            "Seven days' notice, up to 120 pots a week",
+            "A tasting box for large orders, credited against the final bill",
+            "A 50% deposit holds your date"
+          ],
+          "link": {
+            "label": "Plan an event",
+            "href": "#order"
+          }
+        }
+      ],
+      "note": "All prices include the clay pot. Delivery is £6 across London Zones 1–4, and free on orders over £50."
+    },
+    {
+      "type": "reassurance",
+      "id": "baked",
+      "image": {
+        "src": "/assets/images/band-clay-wall.jpg",
+        "alt": "A close view of empty unglazed terracotta pots on a pale stone worktop, showing the rough, porous clay of their walls. An illustration of the kind of vessel misti doi is traditionally set in, not a photograph of Tanu's kitchen."
+      },
+      "eyebrow": {
+        "bn": "হাতে তৈরি",
+        "en": "The craft"
+      },
+      "heading": "Baked, not set",
+      "lede": "Misti doi is usually left to set overnight. Tanu bakes hers, slowly, in the same clay it's served in.",
+      "body": [
+        "Traditional misti doi sets itself. Sweetened milk goes warm into an unglazed clay pot and is left overnight while the culture works. The clay does as much as the milk: it's porous, drawing the whey out through its walls, and that's where the thick texture and faint earthiness of a good one come from.",
+        "Tanu keeps the clay and the culture, and adds a slow, low bake. The milk is reduced first until it turns the colour of caramel, then baked in the pot at a gentle heat. The result is denser and silkier than a set doi, with a deeper caramel note. It's inspired by the comfort of mishti doi, in her words, rather than a copy of it.",
+        "Every batch is small, made in her kitchen in North Harrow and baked in the week it's delivered."
+      ],
+      "callout": {
+        "title": "A note on nuts",
+        "body": "Emerald Bliss contains pistachio, and all four flavours are made in a kitchen that handles nuts. If anyone at your table has a nut allergy, tell us before you order."
+      }
+    },
+    {
+      "type": "people",
+      "id": "tanu",
+      "columns": 1,
+      "eyebrow": {
+        "bn": "রাঁধুনি",
+        "en": "The cook"
+      },
+      "heading": "One kitchen, one oven, one cook",
+      "lede": "Tanu's is Tanushree, and a recipe she carried from Bengal to London.",
+      "portraitCaption": "তনু · Tanu, in Bengali. In place of a photograph."
+    },
+    {
+      "type": "faq",
+      "id": "questions",
+      "alt": true,
+      "eyebrow": {
+        "bn": "প্রশ্ন",
+        "en": "Questions"
+      },
+      "heading": "Good to know",
+      "lede": "What people ask before their first order. Anything else, just call.",
+      "faqs": [
+        {
+          "q": "What is misti doi?",
+          "a": "Sweetened set yoghurt, and the dessert Bengal is best known for. Milk is sweetened, poured warm into an unglazed clay pot and left to set, and the clay draws the whey out through its walls as it firms. A good one is thick enough to hold a spoon upright. You'll see it spelled misti doi, mishti doi or mishti dahi; they're all the same thing."
+        },
+        {
+          "q": "How is baked misti doi different?",
+          "a": "Tanu reduces the milk until it caramelises, then bakes it gently in the clay pot instead of leaving it to set. It comes out denser and silkier, with a deeper caramel flavour. If you grew up on the Kolkata sweet-shop version, think of this as a close relative rather than a copy."
+        },
+        {
+          "q": "Which flavour should I try first?",
+          "a": "Mishti Doi, the original. The other three are built on it, so it tells you most about what Tanu does. Buying for someone else? Blush Rose looks the most like a present. For an occasion, choose Saffron Indulgence."
+        },
+        {
+          "q": "How much does it cost?",
+          "a": "Single pots are £6.50, or £7.50 for Saffron Indulgence. A box of four is £24, six is £34 and twelve is £62. Events of 24 pots or more are £5.50 a pot, or £5.00 from 48. Every price includes the clay pot."
+        },
+        {
+          "q": "Do you deliver?",
+          "a": "Yes, by hand across London Zones 1–4, Friday to Sunday. Delivery is £6, and free on orders over £50. You can also collect from North Harrow on Saturdays between 10am and 1pm. Further afield? Ask, and we'll see what we can do."
+        },
+        {
+          "q": "How long does it keep, and will it travel?",
+          "a": "Four days in the fridge at 0–5°C. It's happy out of the fridge for up to two hours, so a journey across town is fine. Take it out ten minutes before serving: it's at its best just below room temperature."
+        },
+        {
+          "q": "Does it contain nuts?",
+          "a": "Emerald Bliss contains pistachio. The other three don't contain nuts as an ingredient, but everything is made in a kitchen that handles nuts, so no pot can be guaranteed nut-free. Every flavour contains milk."
+        },
+        {
+          "q": "Is it vegetarian? Is it halal?",
+          "a": "It's vegetarian: no gelatine, no egg and no alcohol. It isn't vegan. Tanu's doesn't hold halal certification, but every ingredient is listed in full on the box so you can decide for yourself."
+        },
+        {
+          "q": "Can you cater a wedding, Eid or Durga Puja?",
+          "a": "Yes. We make up to 120 pots a week, with seven days' notice. For big orders we'll send a tasting box first, credited against the final bill, and a 50% deposit holds your date."
+        },
+        {
+          "q": "What do I do with the pot afterwards?",
+          "a": "Keep it. The bhaar is unglazed, food-safe terracotta. Rinse it and use it for a tea light or a small plant, or hand it back on your next delivery and we'll use it again."
+        }
+      ]
+    },
+    {
+      "type": "enquiry",
+      "id": "order",
+      "eyebrow": {
+        "bn": "ফরমাশ",
+        "en": "Order"
+      },
+      "heading": "Place an order",
+      "lede": "Tell us what you'd like and when. Tanu replies herself, usually within four hours, with a total and a delivery window. Nothing is charged until you confirm.",
+      "form": {
+        "id": "order-enquiry",
+        "heading": "Your order",
+        "intro": "No payment is taken here. We'll confirm everything by email or phone first.",
+        "phoneHint": "For a quick call to confirm your delivery window.",
+        "selects": [
+          {
+            "id": "flavour",
+            "label": "Which flavours?",
+            "options": [
+              {
+                "value": "mixed",
+                "label": "One of each, please"
+              },
+              {
+                "value": "mishti-doi",
+                "label": "Mishti Doi, the original"
+              },
+              {
+                "value": "blush-rose",
+                "label": "Blush Rose"
+              },
+              {
+                "value": "emerald-bliss",
+                "label": "Emerald Bliss (pistachio)"
+              },
+              {
+                "value": "saffron",
+                "label": "Saffron Indulgence"
+              },
+              {
+                "value": "unsure",
+                "label": "Not sure yet, suggest something"
+              }
+            ]
+          },
+          {
+            "id": "size",
+            "label": "How many pots?",
+            "options": [
+              {
+                "value": "single",
+                "label": "One to three pots"
+              },
+              {
+                "value": "box4",
+                "label": "Box of 4, £24"
+              },
+              {
+                "value": "box6",
+                "label": "Box of 6, £34"
+              },
+              {
+                "value": "box12",
+                "label": "Box of 12, £62"
+              },
+              {
+                "value": "event",
+                "label": "An event, 24 pots or more"
+              }
+            ]
+          },
+          {
+            "id": "when",
+            "label": "How would you like it?",
+            "options": [
+              {
+                "value": "delivery",
+                "label": "Delivered, Friday to Sunday"
+              },
+              {
+                "value": "collect",
+                "label": "Collected from North Harrow, Saturday"
+              },
+              {
+                "value": "unsure",
+                "label": "Not sure yet"
+              }
+            ]
+          }
+        ],
+        "textarea": {
+          "id": "message",
+          "label": "Date, postcode and anything else",
+          "placeholder": "Allergies first, please. Then the date, your postcode, and any message for a gift card.",
+          "hint": "If anyone eating it has a nut allergy, put it in the first line."
+        },
+        "consents": [
+          {
+            "name": "allergy",
+            "text": "Someone eating this has a nut allergy.",
+            "quiet": "We'll talk it through before anything is made."
+          },
+          {
+            "name": "contact",
+            "required": true,
+            "text": "Tanu's may reply by email or phone.",
+            "quiet": "Used for this order only."
+          }
+        ],
+        "submitLabel": "Send order request",
+        "noSubmit": "This form isn't connected yet, so your request hasn't been sent. Please call or message Tanu on 07448 753015 and she'll take your order directly.",
+        "fields": {
+          "name": {
+            "label": "Your name",
+            "autocomplete": "name"
+          },
+          "email": {
+            "label": "Email",
+            "autocomplete": "email"
+          },
+          "phone": {
+            "label": "Phone",
+            "optional": "optional",
+            "autocomplete": "tel"
+          }
+        },
+        "errors": {
+          "name": "Tell us your name so Tanu knows who she is writing to.",
+          "email": "Enter an email address in the form name@example.com.",
+          "flavour": "Choose a flavour, or pick \"Not sure yet\".",
+          "size": "Choose how many pots you would like.",
+          "contact": "Tick this so Tanu can reply to you."
+        },
+        "selectPlaceholder": "Choose one",
+        "noSubmitHeading": "Not sent yet"
+      },
+      "formNote": "We reply within four hours, Tuesday to Sunday.",
+      "aside": {
+        "heading": "Prefer to talk?",
+        "body": "Call or message Tanu on 07448 753015. For events, a five-minute call is the quickest way to settle dates, numbers and flavours.",
+        "emailLabel": "Email Tanu's",
+        "image": {
+          "src": "/assets/images/band-empty-bhaar.jpg",
+          "alt": "Empty unglazed terracotta pots of the traditional bhaar shape standing upside down in a row along a pale stone bench, with a coil of plain cotton string and a folded sheet of brown paper beside them. An illustration of the vessel misti doi is set in, not a photograph of Tanu's kitchen."
+        }
+      },
+      "stepsHeading": "How ordering works",
+      "steps": [
+        {
+          "title": "Choose your pots",
+          "body": "Pick your flavours and a box size, or tell us the occasion and let Tanu suggest."
+        },
+        {
+          "title": "Send the date",
+          "body": "Use the form below, or call or message. We need 48 hours for up to twelve pots, and a week for events."
+        },
+        {
+          "title": "Confirm and pay",
+          "body": "We reply within four hours with a total and a delivery window. Pay by bank transfer or card link."
+        },
+        {
+          "title": "Delivered chilled",
+          "body": "Hand-delivered Friday to Sunday in an insulated box, or collected from North Harrow on a Saturday morning."
+        }
+      ]
+    },
+    {
+      "type": "visit",
+      "id": "details",
+      "alt": true,
+      "image": {
+        "src": "/assets/images/band-folded-linen.jpg",
+        "alt": "An empty terracotta pot lying on its side on a pale stone worktop beside a folded plain cotton cloth and a brass spoon. An illustration, not a photograph of Tanu's kitchen."
+      },
+      "eyebrow": {
+        "bn": "খুঁটিনাটি",
+        "en": "The details"
+      },
+      "heading": "Delivery, collection and what's in the pot",
+      "headings": {
+        "hours": "When we answer",
+        "transport": "Delivery & collection",
+        "access": "What's in the pot"
+      }
+    }
+  ],
+  "closing": {
+    "heading": "বাংলা মানেই মিষ্টি",
+    "translit": "Bangla manei misti",
+    "body": "Four flavours of baked misti doi, made by hand in North Harrow and brought to your door across London, Friday to Sunday.",
+    "primary": {
+      "label": "Place an order",
+      "href": "#order"
+    },
+    "secondary": {
+      "label": "See the flavours",
+      "href": "#flavours"
+    }
+  }
+}

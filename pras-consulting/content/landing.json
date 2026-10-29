@@ -1,0 +1,38 @@
+{
+  "_comment": "Copy for the PRAS landing page. The hero is the canvas's 'D · Silicon (dark)' direction; its lede now states more than two decades of SAP Production Planning, cross-sector, across varied geographies, as the owner asked (the canvas said eighteen years). The experience section repeats that claim with the sectors, platforms and firms the canvas names.",
+  "hero": {
+    "kicker": "SAP Production Planning × AI",
+    "h1": ["Intelligence,", "engineered in."],
+    "intro": "More than two decades inside SAP Production Planning, with cross-sector experience across varied geographies — now paired with an AI product studio. For UK manufacturers and growing businesses that want plans which think ahead.",
+    "primary": { "label": "Explore services", "href": "#experience" },
+    "secondary": { "label": "See the AI Studio", "short": "AI Studio", "href": "/ai-studio/" },
+    "chip": {
+      "mark": "PRAS",
+      "label": "PP · AI",
+      "alt": "The PRAS chip: a graphite processor with copper contacts and PRAS engraved at its centre"
+    }
+  },
+  "experience": {
+    "id": "experience",
+    "eyebrow": "Experience",
+    "heading": "More than two decades in SAP Production Planning.",
+    "lede": "Cross-sector experience across varied geographies — process, discrete and consumer-goods manufacturing, on ECC and S/4HANA. Built at IBM and Accenture, tested on the client side, now extended with AI.",
+    "stats": [
+      { "value": "20+ yrs", "label": "SAP Production Planning" },
+      { "value": "Cross-sector", "label": "Process · Discrete · Consumer goods" },
+      { "value": "Global", "label": "Varied geographies" },
+      { "value": "ECC → S/4", "label": "Both generations" }
+    ],
+    "craftHeading": "Where the craft was built",
+    "craft": "IBM · Accenture",
+    "domainsHeading": "What makes it work",
+    "domains": ["MRP", "BOMs & routings", "Capacity", "PP/DS", "Process orders", "Shop floor"]
+  },
+  "contact": {
+    "id": "contact",
+    "eyebrow": "Contact",
+    "heading": "Plans that think ahead start with a conversation.",
+    "body": "Tell us about your plant, your SAP landscape and where planning hurts. We’ll come back with a view on what to fix first.",
+    "primary": { "label": "Book a call" }
+  }
+}

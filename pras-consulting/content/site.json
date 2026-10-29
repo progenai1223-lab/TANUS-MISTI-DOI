@@ -1,0 +1,44 @@
+{
+  "_comment": "PRAS Consulting landing page, 29 October 2026. Built from the 'D · Silicon (dark)' hero direction on the PRAS Landing Hero canvas. Facts come from that canvas (IBM, Accenture, ECC and S/4HANA, process / discrete / consumer-goods manufacturing, the AI product studio, UK manufacturers and MSMEs) and from the owner's brief (more than two decades in SAP Production Planning, cross-sector, across varied geographies). Anything not known yet is listed in _placeholders and must be confirmed before launch.",
+  "_placeholders": [
+    "meta.domain — https://www.prasconsulting.co.uk is assumed; confirm the real domain",
+    "contact.email — hello@prasconsulting.co.uk is assumed and does not exist yet",
+    "nav — SAP Services, AI Studio, Mission 11+ and Insights point at pages that are not built yet (/sap-services/, /ai-studio/, /mission-11/, /insights/)"
+  ],
+  "meta": {
+    "name": "PRAS Consulting",
+    "short": "PRAS",
+    "legalName": "PRAS Consulting Limited",
+    "title": "PRAS Consulting · SAP Production Planning × AI",
+    "description": "More than two decades of SAP Production Planning, across sectors and geographies, paired with an AI product studio — for UK manufacturers and growing businesses.",
+    "domain": "https://www.prasconsulting.co.uk"
+  },
+  "nav": [
+    { "label": "SAP Services", "href": "/sap-services/" },
+    { "label": "AI Studio", "href": "/ai-studio/" },
+    { "label": "Mission 11+", "href": "/mission-11/" },
+    { "label": "Insights", "href": "/insights/" },
+    { "label": "About", "href": "#experience" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "localNav": [
+    { "label": "Overview", "href": "#top" },
+    { "label": "Experience", "href": "#experience" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "cta": {
+    "primary": { "label": "Book a call", "href": "#contact" }
+  },
+  "contact": {
+    "email": "hello@prasconsulting.co.uk",
+    "emailIsPlaceholder": true,
+    "locationLabel": "United Kingdom"
+  },
+  "footerNote": "SAP Production Planning × AI.",
+  "notFound": {
+    "h1": "That page isn’t here yet.",
+    "lede": "It may not have been built yet. The landing page has the essentials.",
+    "homeLabel": "Back to PRAS",
+    "description": "This page could not be found."
+  }
+}

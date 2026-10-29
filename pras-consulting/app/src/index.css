@@ -1,0 +1,235 @@
+/* PRAS Consulting — theme for the shadcn/ui build.
+   Every colour below is mirrored from content/brand.json ("dark"), which
+   stays the documented source of truth; contrast ratios are recorded there.
+   Pinned to dark: the page is black by design, so there is no light block
+   and no prefers-color-scheme query. */
+
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+/* Fonts, self-hosted through @fontsource with font-display: swap.
+   Inter for reading and UI, Inter Tight for display; Latin only. */
+@import '@fontsource/inter/latin-400.css';
+@import '@fontsource/inter/latin-500.css';
+@import '@fontsource/inter/latin-600.css';
+@import '@fontsource/inter-tight/latin-600.css';
+@import '@fontsource/inter-tight/latin-700.css';
+
+/* shadcn components carry dark: variants; the page is always dark, so
+   they always apply. */
+@custom-variant dark (&:is(*));
+
+:root {
+  color-scheme: dark;
+
+  /* Brand */
+  --ground: #000000; /* page ground */
+  --surface: #0a0a0c; /* sections set just off the ground */
+  --surface-2: #151517; /* tiles and panels */
+  --ink: #f5f5f7;
+  --muted-ink: #a1a1a6;
+  --subtle: #d2d2d7; /* global nav links */
+  --line: #2c2c2e; /* hairlines, decorative only */
+  --line-strong: #8e8e93;
+  --copper: #f0a868; /* the one accent: buttons, links */
+  --copper-hover: #f6bd88;
+  --copper-light: #f6c08a; /* gradient start */
+  --copper-deep: #d9793a; /* gradient end */
+  --contact: #c8894f; /* the chip's pins */
+  --navy: #0b1f3a; /* the chip's die */
+  --steel: #c7cede;
+  --on-copper: #1d1d1f;
+
+  /* shadcn semantic tokens, mapped onto the brand */
+  --radius: 0.75rem;
+  --background: var(--ground);
+  --foreground: var(--ink);
+  --card: var(--surface-2);
+  --card-foreground: var(--ink);
+  --popover: var(--surface-2);
+  --popover-foreground: var(--ink);
+  --primary: var(--copper);
+  --primary-foreground: var(--on-copper);
+  --secondary: var(--surface-2);
+  --secondary-foreground: var(--ink);
+  --muted: var(--surface-2);
+  --muted-foreground: var(--muted-ink);
+  --accent: var(--surface-2);
+  --accent-foreground: var(--ink);
+  --destructive: #ff7a8a;
+  --border: var(--line);
+  --input: var(--line-strong);
+  --ring: var(--copper);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-ground: var(--ground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-muted-ink: var(--muted-ink);
+  --color-subtle: var(--subtle);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-copper: var(--copper);
+  --color-copper-hover: var(--copper-hover);
+  --color-steel: var(--steel);
+  --color-on-copper: var(--on-copper);
+
+  --radius-sm: calc(var(--radius) - 6px);
+  --radius-md: calc(var(--radius) - 4px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --font-display: 'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-size: 1.0625rem;
+    line-height: 1.5;
+    overflow-x: clip;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  ::selection {
+    background: var(--copper);
+    color: var(--on-copper);
+  }
+}
+
+/* Visible keyboard focus everywhere. Deliberately outside @layer: shadcn
+   components set Tailwind's outline-none, and unlayered rules beat every
+   layer, so this copper ring always shows for keyboard users. */
+:where(a, button, input, textarea, select):focus-visible {
+  outline: 2px solid var(--copper);
+  outline-offset: 3px;
+}
+
+/* Skip link — the class name is exactly "skip", as on the repo's other site. */
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  background: var(--copper);
+  color: var(--on-copper);
+  font-weight: 600;
+}
+.skip:focus {
+  top: 1rem;
+}
+
+/* Copper type: the hero's gradient, kept to display text and the chip. */
+.copper-text {
+  background: linear-gradient(100deg, var(--copper-light) 10%, var(--copper-deep) 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* The PRAS chip: graphite package, copper pins, a navy die on a grid. */
+.chip {
+  background: linear-gradient(150deg, #3a3a3c 0%, #1c1c1e 45%, #0d0d0f 100%);
+  border: 1px solid rgb(255 255 255 / 0.14);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.28),
+    0 50px 100px rgb(0 0 0 / 0.6),
+    0 0 120px rgb(240 168 104 / 0.18);
+}
+.chip-pins-x,
+.chip-pins-y {
+  border-radius: 2px;
+  opacity: 0.85;
+}
+.chip-pins-x {
+  background: repeating-linear-gradient(90deg, var(--contact) 0 var(--pin), transparent var(--pin) var(--pitch));
+}
+.chip-pins-y {
+  background: repeating-linear-gradient(180deg, var(--contact) 0 var(--pin), transparent var(--pin) var(--pitch));
+}
+.chip-die {
+  background-color: var(--navy);
+  background-image:
+    linear-gradient(rgb(143 166 209 / 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(143 166 209 / 0.12) 1px, transparent 1px);
+  background-size: var(--grid) var(--grid);
+  border: 1px solid rgb(240 168 104 / 0.5);
+  box-shadow:
+    inset 0 0 50px rgb(240 168 104 / 0.16),
+    inset 0 1px 0 rgb(255 255 255 / 0.12);
+}
+
+/* The copper glow the chip sits in. */
+.glow {
+  background: radial-gradient(closest-side, rgb(240 168 104 / 0.32), transparent 100%);
+  filter: blur(60px);
+}
+
+/* Scroll reveal. Nothing is hidden in the prerendered HTML: the client
+   only marks elements that are still below the fold once it has hydrated,
+   and never when the reader has asked for reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  [data-reveal].reveal-pending {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  [data-reveal].reveal-in {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
+      transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

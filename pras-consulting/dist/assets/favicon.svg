@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="PRAS Consulting">
+  <title>PRAS Consulting</title>
+  <!-- The hero's chip reduced to what reads at 16 pixels: a graphite
+       package, copper contacts and the navy die. -->
+  <rect x="1" y="1" width="30" height="30" rx="7" fill="#1c1c1e" />
+  <path d="M9 3.5h14M9 28.5h14M3.5 9v14M28.5 9v14" stroke="#c8894f" stroke-width="2" stroke-dasharray="2 2" />
+  <rect x="7.5" y="7.5" width="17" height="17" rx="4" fill="#0b1f3a" stroke="#f0a868" stroke-width="1" />
+  <path d="M13 21V11h3.2a3 3 0 0 1 0 6H13" fill="none" stroke="#f0a868" stroke-width="2" stroke-linejoin="round" />
+</svg>
